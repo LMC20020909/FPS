@@ -1,0 +1,4 @@
+repository "FPS@lmc20020909@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
