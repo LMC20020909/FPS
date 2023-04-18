@@ -14,10 +14,7 @@ public class PlayerSetup : NetworkBehaviour
     {
         if (!IsLocalPlayer)
         {
-            for (int i = 0; i < componentsToDisable.Length; i ++ )
-            {
-                componentsToDisable[i].enabled = false;
-            }
+            DisableComponents();
         }
         else
         {
@@ -26,6 +23,20 @@ public class PlayerSetup : NetworkBehaviour
             {
                 sceneCamera.gameObject.SetActive(false);
             }
+        }
+        SetPlayerName();
+    }
+
+    private void SetPlayerName()
+    {
+        transform.name = "Player " + GetComponent<NetworkObject>().NetworkObjectId;
+    }
+
+    private void DisableComponents()
+    {
+        for (int i = 0; i < componentsToDisable.Length; i++)
+        {
+            componentsToDisable[i].enabled = false;
         }
     }
 
