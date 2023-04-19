@@ -18,6 +18,7 @@ public class Player : NetworkBehaviour
 
     public void Setup()
     {
+        // 记录下组件的初始状态，方便死亡重生后恢复
         componentsEnabled = new bool[componentsToDisable.Length];
         for (int i = 0; i < componentsToDisable.Length; i ++ )
         {

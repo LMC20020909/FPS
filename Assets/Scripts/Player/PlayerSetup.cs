@@ -42,6 +42,7 @@ public class PlayerSetup : NetworkBehaviour
         }
     }
 
+    // 当玩家断开网络时执行
     public override void OnNetworkDespawn()
     {
         base.OnNetworkDespawn();

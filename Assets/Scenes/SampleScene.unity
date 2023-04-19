@@ -1314,6 +1314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137e6052fd512b94b9339316d87140a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  matchingSettings:
+    respawnTime: 3
 --- !u!4 &1917447942
 Transform:
   m_ObjectHideFlags: 0

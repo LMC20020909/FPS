@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // 单例模式
     public static GameManager Singleton;
 
     [SerializeField]
     public MatchingSettings matchingSettings;
 
+    // 记录玩家名字与玩家对应关系的字典，每个client和sever都维护一个
     private static Dictionary<string, Player> players = new Dictionary<string, Player>();
 
     private void Awake()
