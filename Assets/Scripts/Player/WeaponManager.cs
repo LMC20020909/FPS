@@ -15,8 +15,8 @@ public class WeaponManager : NetworkBehaviour
     private GameObject weaponHolder;
 
     private PlayerWeapon currentWeapon;
-
     private WeaponGraphics currentGraphics;
+    private AudioSource currentAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,13 @@ public class WeaponManager : NetworkBehaviour
         weaponObject.transform.SetParent(weaponHolder.transform);
 
         currentGraphics = weaponObject.GetComponent<WeaponGraphics>();
+        currentAudioSource = weaponObject.GetComponent<AudioSource>();
+
+        // 如果是自己的话将音效变为2D（因为枪的模型在玩家的右边，3D会使声音偏右）
+        if (IsLocalPlayer)
+        {
+            currentAudioSource.spatialBlend = 0f;
+        }
     }
 
     public PlayerWeapon GetCurrentWeapon()
@@ -49,6 +56,11 @@ public class WeaponManager : NetworkBehaviour
     public WeaponGraphics GetCurrentGraphics()
     {
         return currentGraphics;
+    }
+
+    public AudioSource GetCurrentAudioSource()
+    {
+        return currentAudioSource;
     }
 
     private void ToggleWeapon()

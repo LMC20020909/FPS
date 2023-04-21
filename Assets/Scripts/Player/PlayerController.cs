@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity = Vector3.zero; // 速度：每秒钟移动的位移
     private Vector3 yRotation = Vector3.zero; // 旋转角色
     private Vector3 xRotation = Vector3.zero; // 旋转camera
+    private float recoilForce = 0f;    // 后坐力
 
     private float cameraRotationTotal = 0f; // 累计转了多少度
     [SerializeField]
@@ -35,6 +36,11 @@ public class PlayerController : MonoBehaviour
         thrusterForce = _thrusterForce;
     }
 
+    public void AddRecoilForce(float newRecoilForce)
+    {
+        recoilForce += newRecoilForce;
+    }
+
     private void PerformMovement()
     {
         if (velocity != Vector3.zero)
@@ -50,18 +56,25 @@ public class PlayerController : MonoBehaviour
 
     private void PerformRotation()
     {
-        if (yRotation != Vector3.zero)
+        if (recoilForce < 0.1)
+        {
+            recoilForce = 0f;
+        }
+
+        if (yRotation != Vector3.zero || recoilForce > 0)
         {
             //rb.MoveRotation() 需要传一个四元数
-            rb.transform.Rotate(yRotation);
+            rb.transform.Rotate(yRotation + rb.transform.up * Random.Range(-2f * recoilForce, 2f * recoilForce));
         }
         
-        if (xRotation != Vector3.zero)
+        if (xRotation != Vector3.zero || recoilForce > 0)
         {
-            cameraRotationTotal += xRotation.x;
+            cameraRotationTotal += xRotation.x - recoilForce;
             cameraRotationTotal = Mathf.Clamp(cameraRotationTotal, -cameraRotationLimit, cameraRotationLimit);  //小于最小值就更新为最小值， 大于最大值就更新为最大值
             cam.transform.localEulerAngles = new Vector3(cameraRotationTotal, 0f, 0f);
         }
+
+        recoilForce *= 0.5f;
     }
 
  

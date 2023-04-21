@@ -165,7 +165,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -527,12 +527,16 @@ MonoBehaviour:
     damage: 3
     range: 100
     shootRate: 10
+    shootCoolDownTime: 0.75
+    recoilForce: 1
     graphics: {fileID: 6124961110808030354, guid: 29c7cc0b2957f5543a7767b6005e20a6, type: 3}
   secondaryWeapon:
     name: DesertEagle
-    damage: 20
+    damage: 10
     range: 100
     shootRate: 0
+    shootCoolDownTime: 0.75
+    recoilForce: 0
     graphics: {fileID: 8694572030398619105, guid: 0c425786a3ae20246b6ee1ea326fee9b, type: 3}
   weaponHolder: {fileID: 1186662854887301941}
 --- !u!1 &6624574388468824290

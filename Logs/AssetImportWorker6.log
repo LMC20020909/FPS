@@ -1,0 +1,337 @@
+Using pre-set license
+Built from '2021.3/china_unity/release' branch; Version is '2021.3.11f1c2 (2c7757f00bfe) revision 2914135'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16143 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.11f1c2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker6
+-projectPath
+E:/UnityProjects/FPS
+-logFile
+Logs/AssetImportWorker6.log
+-srvPort
+8132
+Successfully changed project path to: E:/UnityProjects/FPS
+E:/UnityProjects/FPS
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+AS: AutoStreaming module initializing.
+Refreshing native plugins compatible for Editor in 126.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1c2 (2c7757f00bfe)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/UnityProjects/FPS/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 Ti (ID=0x1f95)
+    Vendor:   NVIDIA
+    VRAM:     3949 MB
+    Driver:   31.0.15.2737
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1c2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.028106 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 112.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.802 seconds
+Domain Reload Profiling:
+	ReloadAssembly (802ms)
+		BeginReloadAssembly (118ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (511ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (106ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (308ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (52ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (113ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (95ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.026515 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 119.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.711 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1712ms)
+		BeginReloadAssembly (164ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1373ms)
+			LoadAssemblies (175ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (374ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (707ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (119ms)
+				BeforeProcessingInitializeOnLoad (160ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
+				AfterProcessingInitializeOnLoad (36ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6099 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 52 unused Assets / (1.9 MB). Loaded Objects now: 6555.
+Memory consumption went from 334.4 MB to 332.5 MB.
+Total: 4.628900 ms (FindLiveObjects: 0.598900 ms CreateObjectMapping: 0.507300 ms MarkObjects: 3.018300 ms  DeleteObjects: 0.503600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 570603.512101 seconds.
+  path: Assets/Audios
+  artifactKey: Guid(8532b7c108c72b34cae69e39b32432aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audios using Guid(8532b7c108c72b34cae69e39b32432aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18100a9e8ed9ef07363b03a3581b7316') in 0.015802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.991105 seconds.
+  path: Assets/Audios/AutoGun_1p_02.wav
+  artifactKey: Guid(f51dc9e794bd9354ba6f7bdf0cfee742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audios/AutoGun_1p_02.wav using Guid(f51dc9e794bd9354ba6f7bdf0cfee742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd003a40211a9316bec65631a30cb297b') in 0.096131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.219694 seconds.
+  path: Assets/Audios/M16A1.wav
+  artifactKey: Guid(f51dc9e794bd9354ba6f7bdf0cfee742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audios/M16A1.wav using Guid(f51dc9e794bd9354ba6f7bdf0cfee742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a2977972089b6bb7a9722215b7a568') in 0.010221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.248786 seconds.
+  path: Assets/PostApocalypseGunsDemo/Pistols/Pistol_ClipIn_05.wav
+  artifactKey: Guid(406c929b7299afb469c82778f8d15d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Pistols/Pistol_ClipIn_05.wav using Guid(406c929b7299afb469c82778f8d15d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc85d209fd54e595fb57f702114b4a60') in 0.011683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013720 seconds.
+  path: Assets/PostApocalypseGunsDemo/Pistols/Zapper_3p_01.wav
+  artifactKey: Guid(230d59294c9857140b63dd308ea4bd63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Pistols/Zapper_3p_01.wav using Guid(230d59294c9857140b63dd308ea4bd63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e274d65c6ef8413d7e2c63e11813cf') in 0.012491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/PostApocalypseGunsDemo/Pistols/Zapper_far_02.wav
+  artifactKey: Guid(56e1d39a6a60ae047a0c3ba3540db2c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Pistols/Zapper_far_02.wav using Guid(56e1d39a6a60ae047a0c3ba3540db2c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107441b30f09ee13716a07f9efb8327e') in 0.012839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PostApocalypseGunsDemo/Pistols/Zapper_far_01.wav
+  artifactKey: Guid(4ef847b9581f57a43a2ed14ab7e6d52e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Pistols/Zapper_far_01.wav using Guid(4ef847b9581f57a43a2ed14ab7e6d52e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc837be0e81267e4c2b8e038ca3127f') in 0.012309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PostApocalypseGunsDemo/Pistols/Zapper_far_03.wav
+  artifactKey: Guid(80fb034c8a4b7fb4b9fe87b5eac8784f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Pistols/Zapper_far_03.wav using Guid(80fb034c8a4b7fb4b9fe87b5eac8784f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64cdac89e8336b0f8e3a5ca90d15e31') in 0.017313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.353091 seconds.
+  path: Assets/PostApocalypseGunsDemo/Z-Extrem/HeavyLaserLauncher1.wav
+  artifactKey: Guid(4d6d816408e48e7428e863203522508f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Z-Extrem/HeavyLaserLauncher1.wav using Guid(4d6d816408e48e7428e863203522508f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587a612288a31c9bf24458ec68ed90a2') in 0.010537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.442679 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Handling_Gun_01_Arming_SFX.wav
+  artifactKey: Guid(9158afb6966d445db9caf1dccf7acbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Handling_Gun_01_Arming_SFX.wav using Guid(9158afb6966d445db9caf1dccf7acbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc2ff410bc65dc980234beb3bb22978') in 0.012826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Handling_Gun_01_Reload_Sq_SFX.wav
+  artifactKey: Guid(e5198250a6a57408bb36e14bc4a322c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Handling_Gun_01_Reload_Sq_SFX.wav using Guid(e5198250a6a57408bb36e14bc4a322c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0db2d45aaff92ea84d05b08ab9727452') in 0.012791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Generic_Tail_SFX.wav
+  artifactKey: Guid(165f70b4d392b4536b355cf849b6d70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Generic_Tail_SFX.wav using Guid(165f70b4d392b4536b355cf849b6d70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0c59affae0e4aeacc8b7c96b5d122d') in 0.011479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Room_Tail_SFX.wav
+  artifactKey: Guid(b3f4100606bad4634ae89b9e4670bb30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Room_Tail_SFX.wav using Guid(b3f4100606bad4634ae89b9e4670bb30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45ead6a72ad26f1a4685d3d7a2a4f26e') in 0.013313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Fire_05_SFX.wav
+  artifactKey: Guid(b2d159f7e00d44d9bbc2d50a0c4fef59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Fire_05_SFX.wav using Guid(b2d159f7e00d44d9bbc2d50a0c4fef59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de73ad386948d0f6bfd0ff3b03d295a') in 0.014932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Fire_02_SFX.wav
+  artifactKey: Guid(4d6281aa604094f04839cffa502096c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Fire_02_SFX.wav using Guid(4d6281aa604094f04839cffa502096c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47aef95a721f79bd5b0769d951c9df3c') in 0.044984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Fire_03_SFX.wav
+  artifactKey: Guid(0dbe91efb8ee94e6695ef0f552d202ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN/Pistol_01_Fire_03_SFX.wav using Guid(0dbe91efb8ee94e6695ef0f552d202ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def38b0e0fab8018e834576c9884af18') in 0.012069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.293702 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Ricochets
+  artifactKey: Guid(854021b8232157247b0134bec83e71cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Ricochets using Guid(854021b8232157247b0134bec83e71cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04ba90087c706c67bd67c63abfe11270') in 0.002348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.100493 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Ricochets/Ricochet_01_SFX.wav
+  artifactKey: Guid(4031e628cfc564d93ac39f8955afbbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Ricochets/Ricochet_01_SFX.wav using Guid(4031e628cfc564d93ac39f8955afbbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cb5974d51006fd2ef0fc1ac762eee77') in 0.016415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.021578 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Shell
+  artifactKey: Guid(b6220cf71e368e54ab79fec30a8398ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Shell using Guid(b6220cf71e368e54ab79fec30a8398ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a85dacde9e344947a2e5958e1f61c99') in 0.002361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.084106 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Shell/Shell_Short_01_SFX.wav
+  artifactKey: Guid(c50dcf401ede9422da7805612256b5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/BULLETS/Shell/Shell_Short_01_SFX.wav using Guid(c50dcf401ede9422da7805612256b5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97a25327718ea3d4fbac8e53e55d3249') in 0.015204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.843920 seconds.
+  path: Assets/Weapons of Choice FREE - Komposite Sound/GUN
+  artifactKey: Guid(467ea756f2f0b8e4ea118a80f885a155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons of Choice FREE - Komposite Sound/GUN using Guid(467ea756f2f0b8e4ea118a80f885a155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b54cae6cb0cc1f813dbdb1c3b0577ac') in 0.002160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.178930 seconds.
+  path: Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_1p_01.wav
+  artifactKey: Guid(fecc3e7a0166a104cb810435f6fdf37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_1p_01.wav using Guid(fecc3e7a0166a104cb810435f6fdf37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d30d4a7627ddf18e7e5823fe79481ab') in 0.015136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013599 seconds.
+  path: Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_1p_03.wav
+  artifactKey: Guid(8af9b84117aab4a48ba134e04951246a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_1p_03.wav using Guid(8af9b84117aab4a48ba134e04951246a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf9f466f06ffe43de4f7f2bca7c833d') in 0.013528 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_far_01.wav
+  artifactKey: Guid(ad9869d4800c2eb4d96fe6af321889da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_far_01.wav using Guid(ad9869d4800c2eb4d96fe6af321889da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53313ea676fd2b94a52efe87e30e1529') in 0.012509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_3p_01.wav
+  artifactKey: Guid(4f02814b62ca4c9469420ae40236bc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_3p_01.wav using Guid(4f02814b62ca4c9469420ae40236bc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0955b3b10fce76259c166bf5b919dc7') in 0.012204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_far_02.wav
+  artifactKey: Guid(f977343db9b66614bb8c597d7f056c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/SniperRifles/AntiMaterialRifle_far_02.wav using Guid(f977343db9b66614bb8c597d7f056c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0059d0d3eb83b5496c928bab7317fd7') in 0.017858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.730085 seconds.
+  path: Assets/PostApocalypseGunsDemo/Miniguns_loop/AssaultCanon_1p_tail.wav
+  artifactKey: Guid(79ee7751ab191f548b7f3232381afa0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Miniguns_loop/AssaultCanon_1p_tail.wav using Guid(79ee7751ab191f548b7f3232381afa0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c36471febd8b7dfa449b66fc96e225') in 0.014840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PostApocalypseGunsDemo/Miniguns_loop/Minigun_Reload_04.wav
+  artifactKey: Guid(e1d79f4a0c7873742babc5f6e9ff800e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostApocalypseGunsDemo/Miniguns_loop/Minigun_Reload_04.wav using Guid(e1d79f4a0c7873742babc5f6e9ff800e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0af62868778238a74e82fb0509fbd72') in 0.020320 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
