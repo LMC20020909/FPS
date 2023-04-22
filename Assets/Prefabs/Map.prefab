@@ -1358,6 +1358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particles_Fire_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 332
@@ -10254,6 +10258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particles_Fire_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 244
@@ -17332,6 +17340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particles_Fire_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 407
@@ -30722,6 +30734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particles_Fire_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 438

@@ -1847,6 +1847,7 @@ Transform:
   m_LocalRotation: {x: -0.085140556, y: 0.21298422, z: -0.018633712, w: -0.9731606}
   m_LocalPosition: {x: -39.52, y: 30.15, z: 64.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 1
@@ -1873,6 +1874,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -2938,6 +2940,7 @@ Transform:
   m_LocalRotation: {x: -0.049190268, y: 0.34099424, z: -0.017870735, w: -0.93860745}
   m_LocalPosition: {x: -17.114, y: 29.498, z: 47.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 7
@@ -2964,6 +2967,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -3156,10 +3160,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 776522121}
     m_Modifications:
+    - target: {fileID: 646059008383925188, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 851296744638326589, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 1976676325057137648, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2156171326554769015, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_Name
       value: Particles_Fire_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 3222002876906715926, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 244
@@ -3798,7 +3822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
+  m_IsGlobal: 1
   priority: 0
   blendDistance: 0
   weight: 1
@@ -3813,6 +3837,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.16644, y: -8.134734, z: 2.9220867}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -4828,10 +4853,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 776522121}
     m_Modifications:
+    - target: {fileID: 646059008383925188, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 851296744638326589, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 1976676325057137648, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2156171326554769015, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_Name
       value: Particles_Fire_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 3222002876906715926, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 407
@@ -5088,6 +5133,7 @@ Transform:
   m_LocalRotation: {x: -0.04343642, y: -0.09141463, z: 0.0039912504, w: -0.9948572}
   m_LocalPosition: {x: -46.12, y: 29.82, z: 38.884}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 3
@@ -5114,6 +5160,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -5790,6 +5837,7 @@ Transform:
   m_LocalRotation: {x: 0.22900431, y: -0.7611419, z: 0.3533103, w: 0.4933476}
   m_LocalPosition: {x: 0, y: 43.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -8175,6 +8223,7 @@ Transform:
   m_LocalRotation: {x: -0.061120946, y: 0.9173881, z: -0.15516458, w: -0.36136872}
   m_LocalPosition: {x: -21.35, y: 35.58, z: 78.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 6
@@ -8201,6 +8250,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -13684,10 +13734,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 776522121}
     m_Modifications:
+    - target: {fileID: 646059008383925188, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 851296744638326589, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 1976676325057137648, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2156171326554769015, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_Name
       value: Particles_Fire_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 3222002876906715926, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 332
@@ -13765,6 +13835,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 507680147}
   - {fileID: 380843842}
@@ -18395,6 +18466,7 @@ Transform:
   m_LocalRotation: {x: -0.020146176, y: -0.9216768, z: 0.04830298, w: -0.38441235}
   m_LocalPosition: {x: -43.95, y: 30.02, z: 77.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 2
@@ -18421,6 +18493,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -19392,6 +19465,7 @@ Transform:
   m_LocalRotation: {x: 0.015773844, y: 0.9314364, z: -0.04066741, w: 0.36128026}
   m_LocalPosition: {x: -58.21, y: 29.98, z: 98.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 0
@@ -19418,6 +19492,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -21190,6 +21265,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -24745,10 +24821,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 776522121}
     m_Modifications:
+    - target: {fileID: 646059008383925188, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 851296744638326589, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 1976676325057137648, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2156171326554769015, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_Name
       value: Particles_Fire_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2917565293699067469, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 3222002876906715926, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 9166600559711903916, guid: 3ce7704754c7f694cb93706e03f4272c, type: 3}
       propertyPath: m_RootOrder
       value: 438
@@ -28287,6 +28383,7 @@ Transform:
   m_LocalRotation: {x: -0.11354805, y: 0.48896372, z: -0.06437328, w: -0.8624833}
   m_LocalPosition: {x: -29.052, y: 33.804, z: 40.785}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 4
@@ -28313,6 +28410,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
@@ -33688,6 +33786,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 41.30866, y: -28.048355, z: -53.560394}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1136385243}
   - {fileID: 87830173}
@@ -34235,6 +34334,7 @@ Transform:
   m_LocalRotation: {x: 0.0057591973, y: 0.99030185, z: -0.04323752, w: 0.13190725}
   m_LocalPosition: {x: -82.16, y: 29.79, z: 80.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079483091}
   m_RootOrder: 5
@@ -34261,6 +34361,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 2

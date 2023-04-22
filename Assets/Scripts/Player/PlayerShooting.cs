@@ -126,6 +126,15 @@ public class PlayerShooting : NetworkBehaviour
         OnshootClientRpc(recoilForce);
     }
 
+    private void NpcOnHit(GameObject npc)
+    {
+        if (npc.GetComponentInChildren<SkinnedMeshRenderer>().GetBlendShapeWeight(8) == 0)
+        {
+            npc.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(8, 100f);
+            npc.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(39, 100f);
+        }
+    }
+
     private void Shoot()
     {
         autoShootCount++;
@@ -149,6 +158,10 @@ public class PlayerShooting : NetworkBehaviour
             else
             {
                 OnHitServerRpc(hit.point, hit.normal, HitEffectMaterial.Stone);
+            }
+            if (hit.collider.tag == "NPC")
+            {
+                NpcOnHit(hit.collider.gameObject);
             }
         }
     }

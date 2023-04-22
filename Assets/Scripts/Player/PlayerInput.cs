@@ -13,14 +13,13 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private PlayerController controller;
 
-    // [SerializeField]
-    private ConfigurableJoint joint;
+    private float distToGround = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        joint = GetComponent<ConfigurableJoint>();
+        distToGround = GetComponent<Collider>().bounds.extents.y;
     }
 
     // Update is called once per frame
@@ -42,25 +41,13 @@ public class PlayerInput : MonoBehaviour
         Vector3 xRotation = new Vector3(-yMouse, 0f, 0f) * lookSensitivity;
         controller.Rotate(yRotation, xRotation);
 
-        Vector3 force = Vector3.zero;
         if (Input.GetButton("Jump"))
         {
-            force = Vector3.up * thrusterForce;
-            joint.yDrive = new JointDrive
+            if (Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f))
             {
-                positionSpring = 0f,
-                positionDamper = 0f,
-                maximumForce = 0f,
-            };
-        } else
-        {
-            joint.yDrive = new JointDrive
-            {
-                positionSpring = 20f,
-                positionDamper = 0f,
-                maximumForce = 40f,
-            };
+                Vector3 force = Vector3.up * thrusterForce;
+                controller.Thrust(force);
+            }
         }
-        controller.Thrust(force);
     }
 }

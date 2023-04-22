@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         if (thrusterForce != Vector3.zero)
         {
             rb.AddForce(thrusterForce); // ◊˜”√Time.FixedDeltaTime√Î£∫0.02√Î
+            thrusterForce = Vector3.zero;
         }
     }
 
