@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     [SerializeField]
     private Rigidbody rb;
@@ -19,6 +21,16 @@ public class PlayerController : MonoBehaviour
     private float cameraRotationLimit = 85f;
 
     private Vector3 thrusterForce = Vector3.zero; //向上的推力
+
+    private float eps = 0.01f;
+    private Vector3 lastFramePosition = Vector3.zero;   // 记录上一帧的位置
+    private Animator animator;
+
+    private void Start()
+    {
+        lastFramePosition = transform.position;
+        animator = GetComponentInChildren<Animator>();
+    }
 
     public void Move(Vector3 _velocity)
     {
@@ -78,11 +90,57 @@ public class PlayerController : MonoBehaviour
         recoilForce *= 0.5f;
     }
 
+    private void PerformAnimation()
+    {
+        Vector3 deltaPosition = transform.position - lastFramePosition;
+        lastFramePosition = transform.position;
+
+        float forward = Vector3.Dot(deltaPosition, transform.forward);
+        float right = Vector3.Dot(deltaPosition, transform.right);
+
+        int direction = 0;  // 静止
+        if (forward > eps)
+        {
+            direction = 1;  // 向前
+        }
+        else if (forward < -eps)
+        {
+            if (right > eps)
+            {
+                direction = 4;  // 右后
+            }
+            else if (right < -eps)
+            {
+                direction = 6;  // 左后
+            }
+            else
+            {
+                direction = 5;  // 后
+            }
+        }
+        else if (right > eps)
+        {
+            direction = 3;  // 右
+        }
+        else if (right < -eps)
+        {
+            direction = 7; // 左
+        }
+        animator.SetInteger("direction", direction);
+    }
  
 
     private void FixedUpdate()
     {
-        PerformMovement();
-        PerformRotation();
+        if (IsLocalPlayer)
+        {
+            PerformMovement();
+            PerformRotation();
+        }
+    }
+
+    private void Update()
+    {
+        PerformAnimation();
     }
 }
