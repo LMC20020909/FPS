@@ -16,6 +16,7 @@ public class Player : NetworkBehaviour
     private NetworkVariable<int> currentHealth = new NetworkVariable<int>();
     private NetworkVariable<bool> isDead = new NetworkVariable<bool>();
 
+
     public void Setup()
     {
         // 记录下组件的初始状态，方便死亡重生后恢复
@@ -47,6 +48,11 @@ public class Player : NetworkBehaviour
         }
     }
 
+    public bool IsDead()
+    {
+        return isDead.Value;
+    }
+
     // 受到了伤害, 只会在服务器端被调用
     public void TakeDamage(int damage)
     {
@@ -72,7 +78,10 @@ public class Player : NetworkBehaviour
         yield return new WaitForSeconds(GameManager.Singleton.matchingSettings.respawnTime);    // 延迟3秒后重生
 
         SetDefaults();  // 恢复初始状态
-        
+
+        GetComponentInChildren<Animator>().SetInteger("direction", 0);
+        GetComponent<Rigidbody>().useGravity = true;
+
         if (IsLocalPlayer)
         {
             transform.position = new Vector3(0f, 10f, 0f);  // 重生位置在天上
@@ -92,6 +101,9 @@ public class Player : NetworkBehaviour
 
     private void Die()
     {
+        GetComponentInChildren<Animator>().SetInteger("direction", -1);
+        GetComponent<Rigidbody>().useGravity = false;
+
         for (int i = 0; i < componentsToDisable.Length; i ++ )
         {
             componentsToDisable[i].enabled = false;
