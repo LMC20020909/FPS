@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : NetworkBehaviour
@@ -15,7 +16,8 @@ public class Player : NetworkBehaviour
     // 只能在server上修改，之后自动同步到每一个客户端
     private NetworkVariable<int> currentHealth = new NetworkVariable<int>();
     private NetworkVariable<bool> isDead = new NetworkVariable<bool>();
-
+    private NetworkVariable<bool> isInvincible = new NetworkVariable<bool>();
+    private NetworkVariable<float> invincibleTime = new NetworkVariable<float>();
 
     public void Setup()
     {
@@ -45,6 +47,21 @@ public class Player : NetworkBehaviour
         {
             currentHealth.Value = maxHealth;
             isDead.Value = false;
+            isInvincible.Value = true;
+            invincibleTime.Value = 0f;
+        }
+    }
+
+    private void Update()
+    {
+        if (IsServer && isInvincible.Value)
+        {
+            invincibleTime.Value += Time.deltaTime;
+            if (invincibleTime.Value > 5f)
+            {
+                isInvincible.Value = false;
+                invincibleTime.Value = 0f;
+            }
         }
     }
 
@@ -56,7 +73,7 @@ public class Player : NetworkBehaviour
     // 受到了伤害, 只会在服务器端被调用
     public void TakeDamage(int damage)
     {
-        if (isDead.Value) return;   // 死了就不再受到伤害
+        if (isDead.Value || isInvincible.Value) return;   // 死了就不再受到伤害
 
         currentHealth.Value -= damage;
 
@@ -84,7 +101,7 @@ public class Player : NetworkBehaviour
 
         if (IsLocalPlayer)
         {
-            transform.position = new Vector3(Random.Range(-40f, 20f), 30f, Random.Range(-8f, 60f));  // 重生位置在天上
+            transform.position = new Vector3(0f, 10f, 0f);  // 重生位置在天上
         }
     }
 
@@ -102,6 +119,7 @@ public class Player : NetworkBehaviour
     private void Die()
     {
         GetComponentInChildren<Animator>().SetInteger("direction", -1);
+        GetComponentInChildren<Animator>().SetBool("isHitted", false);
         GetComponent<Rigidbody>().useGravity = false;
 
         for (int i = 0; i < componentsToDisable.Length; i ++ )

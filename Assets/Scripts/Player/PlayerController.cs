@@ -28,6 +28,8 @@ public class PlayerController : NetworkBehaviour
 
     private float distToGround = 0f;
 
+    private float hittedTime = 0f;
+
     private void Start()
     {
         lastFramePosition = transform.position;
@@ -101,8 +103,9 @@ public class PlayerController : NetworkBehaviour
 
         float forward = Vector3.Dot(deltaPosition, transform.forward);
         float right = Vector3.Dot(deltaPosition, transform.right);
-
+        
         int direction = 0;  // æ≤÷π
+        
         if (forward > eps)
         {
             direction = 1;  // œÚ«∞
@@ -160,6 +163,16 @@ public class PlayerController : NetworkBehaviour
         if (!IsLocalPlayer)
         {
             PerformAnimation();
+
+            if (GetComponentInChildren<Animator>().GetBool("isHitted"))
+            {
+                hittedTime += Time.deltaTime;
+                if (hittedTime > 0.1f)
+                {
+                    GetComponentInChildren<Animator>().SetBool("isHitted", false);
+                    hittedTime = 0f;
+                }
+            }
         }
     }
 }

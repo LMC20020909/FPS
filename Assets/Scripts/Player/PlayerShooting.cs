@@ -154,6 +154,7 @@ public class PlayerShooting : NetworkBehaviour
             {
                 ShootServerRpc(hit.collider.name, currentWeapon.damage);
                 OnHitServerRpc(hit.point, hit.normal, HitEffectMaterial.Metal);
+                SetIsHitted(hit.collider.name);
             }
             else
             {
@@ -171,5 +172,11 @@ public class PlayerShooting : NetworkBehaviour
     {
         Player player = GameManager.Singleton.GetPlayer(name);
         player.TakeDamage(damage);
+    }
+
+    private void SetIsHitted(string name)
+    {
+        Player player = GameManager.Singleton.GetPlayer(name);
+        player.GetComponentInChildren<Animator>().SetBool("isHitted", true);
     }
 }
