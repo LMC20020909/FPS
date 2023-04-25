@@ -27,6 +27,7 @@ public class PlayerSetup : NetworkBehaviour
             {
                 sceneCamera.gameObject.SetActive(false);
             }
+            transform.position = new Vector3(Random.Range(-40f, 20f), 35f, Random.Range(-8f, 60f));
         }
 
         string name = "Player " + GetComponent<NetworkObject>().NetworkObjectId.ToString();

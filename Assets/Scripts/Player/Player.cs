@@ -84,7 +84,7 @@ public class Player : NetworkBehaviour
 
         if (IsLocalPlayer)
         {
-            transform.position = new Vector3(0f, 10f, 0f);  // 重生位置在天上
+            transform.position = new Vector3(Random.Range(-40f, 20f), 30f, Random.Range(-8f, 60f));  // 重生位置在天上
         }
     }
 
