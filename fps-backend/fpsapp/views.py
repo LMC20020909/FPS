@@ -22,7 +22,7 @@ def build_room(request):
         if not Room.objects.filter(port=port).exists():
             room = Room.objects.create(name="Room-%d" % port, port=port)
             return JsonResponse({
-                'erroe_message': "success",
+                'error_message': "success",
                 'name': room.name,
                 'port': room.port,
             })
