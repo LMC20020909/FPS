@@ -48,4 +48,3 @@ python3 manage.py runserver 0.0.0.0:8080
 ```bash
 ./server.x86_64 -batchmode -nographics -lauch-as-server -port 7777
 ```
-
