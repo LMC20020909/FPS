@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     // 记录玩家名字与玩家对应关系的字典，每个client和sever都维护一个
     private static Dictionary<string, Player> players = new Dictionary<string, Player>();
 
+    private static Dictionary<string, Npc> npcs = new Dictionary<string, Npc>();
+
     private void Awake()
     {
         Singleton = this;
@@ -24,9 +26,19 @@ public class GameManager : MonoBehaviour
         players.Add(name, player);
     }
 
+    public void RegisterNpc(string name, Npc npc)
+    {
+        npcs.Add(name, npc);
+    }
+
     public Player GetPlayer(string name)
     {
         return players[name];
+    }
+
+    public Npc GetNpc(string name)
+    {
+        return npcs[name];
     }
 
     public void UnRegisterPlayer(string name)

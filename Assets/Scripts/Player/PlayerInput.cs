@@ -50,4 +50,14 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
 }

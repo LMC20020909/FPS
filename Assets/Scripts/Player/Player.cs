@@ -99,10 +99,13 @@ public class Player : NetworkBehaviour
         GetComponentInChildren<Animator>().SetInteger("direction", 0);
         GetComponent<Rigidbody>().useGravity = true;
 
-        if (IsLocalPlayer)
-        {
-            transform.position = new Vector3(0f, 10f, 0f);  // 重生位置在天上
-        }
+        //if (IsLocalPlayer)
+        //{
+           //Vector3[] resPos = { new Vector3(0f, 10f, 0f), new Vector3(0f, 10f, 100f), new Vector3(-60f, 10f, 25f), new Vector3(45f, 10f, 27f) };
+            //transform.position = resPos[Random.Range(0, 4)];  // 重生位置在天上
+        //}
+        Vector3[] resPos = { new Vector3(0f, 10f, 0f), new Vector3(0f, 10f, 100f), new Vector3(-60f, 10f, 25f), new Vector3(45f, 10f, 27f) };
+        transform.position = resPos[Random.Range(0, 4)];  // 重生位置在天上
     }
 
     private void DieOnServer()

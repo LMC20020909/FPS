@@ -13,6 +13,8 @@ public class PlayerShooting : NetworkBehaviour
     private float ShootCoolDownTime = 0f;   // 距离上次开枪过了多久（秒）
     private int autoShootCount = 0; // 当前一共连开多少枪
 
+    private float accelerateCoolDownTime = 0f;
+
     [SerializeField]
     private LayerMask mask;
 
@@ -37,6 +39,15 @@ public class PlayerShooting : NetworkBehaviour
     void Update()
     {
         ShootCoolDownTime += Time.deltaTime;
+        if (GetComponent<PlayerInput>().GetSpeed() > 5f)
+        {
+            accelerateCoolDownTime += Time.deltaTime;
+        }
+        if (accelerateCoolDownTime >= 30f)
+        {
+            GetComponent<PlayerInput>().SetSpeed(5f);
+            accelerateCoolDownTime = 0f;
+        }
 
         if (!IsLocalPlayer) return;
 
@@ -57,7 +68,7 @@ public class PlayerShooting : NetworkBehaviour
                 autoShootCount = 0;
                 // 重复执行一个函数，第一个参数为函数名，第二个参数为什么时候执行第一次， 第三个参数为两次执行的时间间隔
                 InvokeRepeating("Shoot", 0f, 1f / currentWeapon.shootRate);
-            } else if (Input.GetButtonUp("Fire1") || Input.GetKeyDown(KeyCode.Q))   // 松开鼠标左键或者切换武器，停止连发
+            } else if (Input.GetButtonUp("Fire1") || Input.GetKeyDown(KeyCode.Q) || GetComponent<Player>().IsDead())   // 松开鼠标左键或者切换武器，停止连发
             {
                 CancelInvoke("Shoot");
             }
@@ -126,12 +137,39 @@ public class PlayerShooting : NetworkBehaviour
         OnshootClientRpc(recoilForce);
     }
 
-    private void NpcOnHit(GameObject npc)
+    [ClientRpc]
+    private void NpcOnHitClientRpc(string name)
     {
+        NpcOnHit(name);
+    }
+
+    [ServerRpc]
+    private void NpcOnHitServerRpc(string name)
+    {
+        if (!IsHost)
+        {
+            NpcOnHit(name);
+        }
+        NpcOnHitClientRpc(name);
+    }
+
+    private void NpcOnHit(string name)
+    {
+        Npc npc = GameManager.Singleton.GetNpc(name);
+
         if (npc.GetComponentInChildren<SkinnedMeshRenderer>().GetBlendShapeWeight(8) == 0)
         {
             npc.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(8, 100f);
             npc.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(39, 100f);
+        }
+
+        if (name == "Keli")
+        {
+            float speed = GetComponent<PlayerInput>().GetSpeed();
+            if (speed < 10f)
+            {
+                GetComponent<PlayerInput>().SetSpeed(speed * 1.2f);
+            }
         }
     }
 
@@ -162,7 +200,7 @@ public class PlayerShooting : NetworkBehaviour
             }
             if (hit.collider.tag == "NPC")
             {
-                NpcOnHit(hit.collider.gameObject);
+                NpcOnHitServerRpc(hit.collider.name);
             }
         }
     }
