@@ -14,6 +14,7 @@ public class PlayerSetup : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
+
         if (!IsLocalPlayer)
         {
             SetLayerMaskForAllChildren(transform, LayerMask.NameToLayer("Remote Player"));
@@ -21,6 +22,7 @@ public class PlayerSetup : NetworkBehaviour
         }
         else
         {
+            PlayerUI.Singleton.setPlayer(GetComponent<Player>());
             SetLayerMaskForAllChildren(transform, LayerMask.NameToLayer("Player"));
             sceneCamera = Camera.main;
             if (sceneCamera != null)

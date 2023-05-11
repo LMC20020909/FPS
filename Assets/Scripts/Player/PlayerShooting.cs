@@ -53,6 +53,17 @@ public class PlayerShooting : NetworkBehaviour
 
         currentWeapon = weaponManager.GetCurrentWeapon();
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            ShootServerRpc(transform.name, 10);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            weaponManager.reload(currentWeapon);
+            return;
+        }
+
         if (currentWeapon.shootRate <= 0)   // 单发
         {
             if (Input.GetButtonDown("Fire1") && ShootCoolDownTime >= currentWeapon.shootCoolDownTime)
@@ -68,12 +79,17 @@ public class PlayerShooting : NetworkBehaviour
                 autoShootCount = 0;
                 // 重复执行一个函数，第一个参数为函数名，第二个参数为什么时候执行第一次， 第三个参数为两次执行的时间间隔
                 InvokeRepeating("Shoot", 0f, 1f / currentWeapon.shootRate);
-            } else if (Input.GetButtonUp("Fire1") || Input.GetKeyDown(KeyCode.Q) || GetComponent<Player>().IsDead())   // 松开鼠标左键或者切换武器，停止连发
+            } else if (Input.GetButtonUp("Fire1") || Input.GetKeyDown(KeyCode.Q))   // 松开鼠标左键或者切换武器，停止连发
             {
                 CancelInvoke("Shoot");
             }
         }
         
+    }
+
+    public void StopShooting()
+    {
+        CancelInvoke("Shoot");
     }
 
     private void OnHit(Vector3 pos, Vector3 normal, HitEffectMaterial material) // 击中点的特效
@@ -175,6 +191,15 @@ public class PlayerShooting : NetworkBehaviour
 
     private void Shoot()
     {
+        if (currentWeapon.bullets <= 0 || currentWeapon.isReloading) return;
+
+        currentWeapon.bullets--;
+
+        if (currentWeapon.bullets <= 0)
+        {
+            weaponManager.reload(currentWeapon);
+        }
+
         autoShootCount++;
         float recoilForce = currentWeapon.recoilForce;
 

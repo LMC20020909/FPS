@@ -46,24 +46,24 @@ public class GameManager : MonoBehaviour
         players.Remove(name);
     }
 
-    private void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(200f, 200f, 200f, 400f));
-        GUILayout.BeginVertical();
+    //private void OnGUI()
+    //{
+    //    GUILayout.BeginArea(new Rect(200f, 200f, 200f, 400f));
+    //    GUILayout.BeginVertical();
 
-        //GUI.contentColor = Color.black;
-        //GUILayout.Label(info);
+    //    //GUI.contentColor = Color.black;
+    //    //GUILayout.Label(info);
 
-        GUI.color = Color.red;
+    //    GUI.color = Color.red;
 
-        foreach (string name in players.Keys)
-        {
-            Player player = GetPlayer(name);
-            GUILayout.Label(name + " - " + player.GetHealth());
-        }
+    //    foreach (string name in players.Keys)
+    //    {
+    //        Player player = GetPlayer(name);
+    //        GUILayout.Label(name + " - " + player.GetHealth());
+    //    }
 
-        GUILayout.EndVertical();
-        GUILayout.EndArea();
-    }
+    //    GUILayout.EndVertical();
+    //    GUILayout.EndArea();
+    //}
 
 }
