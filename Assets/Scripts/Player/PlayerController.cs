@@ -11,6 +11,9 @@ public class PlayerController : NetworkBehaviour
     [SerializeField]
     private Camera cam;
 
+    [SerializeField]
+    private Transform bipSpine;
+
     private Vector3 velocity = Vector3.zero; // 速度：每秒钟移动的位移
     private Vector3 yRotation = Vector3.zero; // 旋转角色
     private Vector3 xRotation = Vector3.zero; // 旋转camera
@@ -91,6 +94,7 @@ public class PlayerController : NetworkBehaviour
             cameraRotationTotal += xRotation.x - recoilForce;
             cameraRotationTotal = Mathf.Clamp(cameraRotationTotal, -cameraRotationLimit, cameraRotationLimit);  //小于最小值就更新为最小值， 大于最大值就更新为最大值
             cam.transform.localEulerAngles = new Vector3(cameraRotationTotal, 0f, 0f);
+            // bipSpine.localEulerAngles = new Vector3(-4.473f, -cameraRotationTotal - 2.104f, 271.194f);
         }
 
         recoilForce *= 0.5f;

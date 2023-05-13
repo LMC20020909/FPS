@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6624574388168869706}
   cam: {fileID: 6624574388468824289}
+  bipSpine: {fileID: 5666234880972232335}
   cameraRotationLimit: 85
 --- !u!114 &3721202050678063736
 MonoBehaviour:
@@ -512,10 +513,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.66
   m_Height: 2.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!114 &2967761846521957524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1083,11 @@ PrefabInstance:
 --- !u!4 &1368635750096025521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 498876, guid: 3b5ab3dd72d54ff46ab6be8c31770ac8, type: 3}
+  m_PrefabInstance: {fileID: 1368635750095530765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5666234880972232335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6655436709806685570, guid: 3b5ab3dd72d54ff46ab6be8c31770ac8, type: 3}
   m_PrefabInstance: {fileID: 1368635750095530765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6738994373930232832 stripped

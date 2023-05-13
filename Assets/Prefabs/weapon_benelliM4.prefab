@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5731209474674770387}
   - component: {fileID: 7421522852125028076}
   - component: {fileID: -8525467450631793376}
+  - component: {fileID: 1776389772072745774}
   m_Layer: 0
   m_Name: weapon_benelliM4
   m_TagString: Untagged
@@ -229,6 +230,20 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2645264428992647658}
   metalHitEffectPrefab: {fileID: 8145290651197479520, guid: b3b0685c76eb9324da0c1a4d3f198167, type: 3}
   stoneHitEffectPrefab: {fileID: 375952748322163595, guid: 0e6bb35540047294d8dcdbce6d747a4a, type: 3}
+--- !u!136 &1776389772072745774
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5731209474676550329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.12
+  m_Height: 1.35
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.22, z: 0.05}
 --- !u!1001 &8761941489494418812
 PrefabInstance:
   m_ObjectHideFlags: 0
