@@ -23,6 +23,14 @@ public class PlayerInfo : MonoBehaviour
     void Update()
     {
         playerName.text = transform.name;
+        if (int.Parse(transform.name.Substring(transform.name.Length - 1, 1)) % 2 == 0)
+        {
+            playerName.text = "软件学院第一枪神";
+        }
+        else
+        {
+            playerName.text = "侯哥别卷了";
+        }
         playerHealth.localScale = new Vector3(player.GetHealth() / 100f, 1f, 1f);
 
         var camera = Camera.main;
