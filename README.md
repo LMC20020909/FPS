@@ -34,14 +34,6 @@ Unity3D+Django
 
 
 
-#### Bugs to fix
-
-1. 枪不能随着玩家视角转动
-2. npc脚本
-4. 玩家序号有问题
-
-
-
 ```bash
 python3 manage.py runserver 0.0.0.0:8080
 ```
