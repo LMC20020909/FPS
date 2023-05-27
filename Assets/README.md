@@ -48,7 +48,7 @@ tzlFps强调个人技术和游戏策略的平衡。游戏提供了多人对战�
 
 初始界面如下图所示：
 
-![初始界面](img/进入游戏.png)
+![初始界面](https://gitee.com/LMC20020909/image/raw/master/img/%E8%BF%9B%E5%85%A5%E6%B8%B8%E6%88%8F.png)
 
 ## 角色移动
 
@@ -64,7 +64,7 @@ tzlFps强调个人技术和游戏策略的平衡。游戏提供了多人对战�
 
 玩家可以通过按下鼠标左键进行射击操作。射击的目标是鼠标指针（屏幕准星）所指向的方向。
 
-![射击](img/射击.png)
+![射击](https://gitee.com/LMC20020909/image/raw/master/img/%E5%B0%84%E5%87%BB.png)
 
 ### 枪支设定和换枪
 
@@ -95,7 +95,7 @@ tzlFps强调个人技术和游戏策略的平衡。游戏提供了多人对战�
 
 每位玩家的初始血量为100点。玩家可以在屏幕下方看到一条白色的血条，该血条将实时显示玩家当前的血量。此外，每位玩家的头顶都有一个血条，这个血条会实时显示该玩家的血量，供其他玩家查看。
 
-![对战](img/对战.png)
+![对战](https://gitee.com/LMC20020909/image/raw/master/img/%E5%AF%B9%E6%88%98.png)
 
 ### 游戏模式
 
@@ -125,9 +125,9 @@ tzlFps是一款单人对战游戏，不存在团队的概念。玩家的目标�
 
 由于时间原因，目前我仅实现了部分NPC与玩家的交互。我期待玩家们能提供宝贵的建议，帮助我在未来的更新中进一步完善NPC的设计和交互效果，使tzlFps游戏变得更加丰富和有趣。
 
-![原神角色——丘丘人](img/丘丘人.png)
+![原神角色——丘丘人](https://gitee.com/LMC20020909/image/raw/master/img/%E4%B8%98%E4%B8%98%E4%BA%BA.png)
 
-![原神角色——可莉](img/可莉.png)
+![原神角色——可莉](https://gitee.com/LMC20020909/image/raw/master/img/%E5%8F%AF%E8%8E%89.png)
 
 ## 退出游戏
 
@@ -149,7 +149,7 @@ tzlFps是一款单人对战游戏，不存在团队的概念。玩家的目标�
 
 ## 初始界面UI
 
-![初始界面UI](img/初始界面UI.png)
+![初始界面UI](https://gitee.com/LMC20020909/image/raw/master/img/%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2UI.png)
 
 如上图所示，初始界面UI是一张canvas，由四个组件组成：Refresh按钮、Build按钮、玩家血条和剩余子弹数量。由于玩家进入游戏时仅能看到上面两个按钮，故初始状态下玩家血条和剩余子弹数量被禁用，只有当玩家进入游戏后才会实时显示。为了适应不同分辨率的屏幕，将玩家血条和剩余子弹数量的组件锚点分别设置为底部和右下角，保证显示在正确位置上。
 
@@ -410,17 +410,17 @@ private void PerformRotation()
 
 1. Player自身的状态
 
-   ![同步player](img/同步player.png)
+   ![同步player](https://gitee.com/LMC20020909/image/raw/master/img/%E5%90%8C%E6%AD%A5player.png)
 
 2. Player中的camera
 
-   ![同步camera](img/同步camera.png)
+   ![同步camera](https://gitee.com/LMC20020909/image/raw/master/img/%E5%90%8C%E6%AD%A5camera.png)
 
 3. 开局创建角色
 
 
 
-![创建角色](img/创建角色.png)
+![创建角色](https://gitee.com/LMC20020909/image/raw/master/img/%E5%88%9B%E5%BB%BA%E8%A7%92%E8%89%B2.png)
 
 ### 禁用非本地玩家的组件
 
@@ -683,7 +683,7 @@ NPC模型采用游戏***《原神》***所提供的角色模型，参考老师�
 
 参考视频：[从Mixamo导入的动画用起来会变形怎么办？三分钟告诉你怎么解决。](https://www.bilibili.com/video/BV1fg411w7HT/?spm_id_from=333.999.0.0&vd_source=7554f1c4b7a28b1f0e9ee9560c5d1e37)
 
-![角色骨骼调整](img/qin.png)
+![角色骨骼调整](https://gitee.com/LMC20020909/image/raw/master/img/qin.png)
 
 NPC动画转换功能实现如下：
 
@@ -720,7 +720,7 @@ void Update()
 
 ## 玩家人物动画系统的设计
 
-![玩家人物动画](img/动画.png)
+![玩家人物动画](https://gitee.com/LMC20020909/image/raw/master/img/%E5%8A%A8%E7%94%BB.png)
 
 本游戏实现了玩家人物待机、前进、后退、左移、右移、左后、右后、跳跃、受击、死亡的动画，力求增加玩家的游戏体验与真实效果，这些动画包含在人物模型的资源包中，所以与人物模型非常适配。
 
@@ -728,7 +728,7 @@ void Update()
 
 首先为动画系统设置变量来控制动画的切换：
 
-![动画变量](img/动画变量.png)
+![动画变量](https://gitee.com/LMC20020909/image/raw/master/img/%E5%8A%A8%E7%94%BB%E5%8F%98%E9%87%8F.png)
 
 接着通过脚本实现不同情况下的动画展示：
 
